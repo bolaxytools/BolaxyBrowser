@@ -1,0 +1,41 @@
+@import '../../styles/_common.less';
+
+.search {
+  padding-top: 126px;
+}
+
+.title {
+  text-align: center;
+  .titleFont;
+  padding-bottom: 87px;
+}
+
+.searchBox {
+  .center;
+  width: 800px;
+  height: 54px;
+  border-radius: 27px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 auto;
+  & > input {
+    height: 100%;
+    width: 730px;
+    padding: 0 30px;
+    font-size: 14px;
+    &::placeholder {
+      color: #808080;
+    }
+  }
+}
+
+.searchBtn {
+  background-color: #F1844B;
+  width: 70px;
+  height: 100%;
+  .center;
+  cursor: pointer;
+  &:active {
+    opacity: 0.6;
+  }
+}

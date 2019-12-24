@@ -1,0 +1,106 @@
+.container {
+  padding-top: 161px;
+}
+.backBtn {
+  color: #4598FF;
+  display: inline-block;
+  margin: 50px 0 30px 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.backBtn:active {
+  opacity: 0.6;
+}
+.content {
+  background: #fff;
+  box-shadow: 0px 5px 30px 0px rgba(229, 235, 242, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.contentH {
+  height: 310px;
+  background: url('../../assets/background_orange.png');
+  padding: 70px 58px 0;
+}
+.contentB {
+  height: 194px;
+  padding: 47px 0;
+  display: flex;
+  align-items: center;
+}
+.contentB > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid #F3F7FD;
+}
+.contentB > li:nth-last-child(1) {
+  border-right: none;
+}
+.contentB > li > p {
+  color: #454F63;
+  margin-bottom: 0;
+}
+.contentB > li > span {
+  font-size: 30px;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: #0B3E6D;
+  padding-bottom: 15px;
+}
+.hTitle {
+  display: flex;
+  font-size: 20px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  padding-bottom: 60px;
+  color: #fff;
+}
+.hTitle > span {
+  flex: 1;
+  text-align: center;
+}
+.hContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hContent > p {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: underline;
+}
+.hContent > p::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url('../../assets/key_deal.png');
+  margin-right: 15px;
+}
+.progressTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  padding-bottom: 8px;
+  color: #939EAB;
+}
+.progress {
+  width: 250px;
+  height: 8px;
+  background: #EAEFF3;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.progress > span {
+  height: 100%;
+  display: block;
+  border-radius: 4px;
+  background-color: #4598FF;
+}

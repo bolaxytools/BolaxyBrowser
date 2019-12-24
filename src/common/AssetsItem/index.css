@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 0 26px;
+}
+.item > :last-child {
+  text-align: right;
+}
+.imgText {
+  display: flex;
+  align-items: center;
+}
+.imgText > span {
+  padding-left: 10px;
+}
+.hashText {
+  color: #3671F1;
+}

@@ -9,6 +9,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,9 +18,28 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "typeRoots": [
+      "node",
+      "node_modules/@types",
+      "./typings"
+    ],
+    "rootDirs": [
+      "./src"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@views/*": ["containers/views/*"],
+      "@shared/*": ["containers/shared/*"],
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"],
+      "@constants/*": ["constants/*"],
+      "@services/*": ["services/*"],
+      "@locales/*": ["locales/*"]
+    }
   },
   "include": [
-    "src"
+    "src", "typings"
   ]
 }

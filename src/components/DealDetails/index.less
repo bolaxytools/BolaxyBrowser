@@ -1,0 +1,108 @@
+@import '../../styles/_common.less';
+
+.container {
+  padding-top: 161px;
+}
+
+.backBtn {
+  color: #4598FF;
+  display: inline-block;
+  margin: 50px 0 30px 0;
+  cursor: pointer;
+  text-decoration: underline;
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.content {
+  background: #fff;
+  box-shadow: 0px 5px 30px 0px rgba(229,235,242,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.contentH {
+  height: 310px;
+  background: url('../../assets/background_orange.png');
+  padding: 70px 58px 0;
+}
+
+.contentB {
+  height: 194px;
+  padding: 47px 0;
+  .rowCenter;
+  & > li {
+    height: 100%;
+    .center;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid #F3F7FD;
+    &:nth-last-child(1) {
+      border-right: none;
+    }
+    & > p {
+      color: #454F63;
+      margin-bottom: 0;
+    }
+    & > span {
+      font-size: 30px;
+      font-family: DINAlternate-Bold,DINAlternate;
+      font-weight: bold;
+      color: #0B3E6D;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.hTitle {
+  display: flex;
+  font-size: 20px;
+  font-family: PingFangSC-Semibold,PingFang SC;
+  font-weight: 600;
+  padding-bottom: 60px;
+  color: #fff;
+  & > span {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.hContent {
+  .flexBtwCer;
+  & > p {
+    .rowCenter;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: underline;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url('../../assets/key_deal.png');
+      margin-right: 15px;
+    }
+  }
+}
+
+.progressTitle {
+  .flexBtwCer;
+  font-size: 13px;
+  padding-bottom: 8px;
+  color: #939EAB;
+}
+
+.progress {
+  width: 250px;
+  height: 8px;
+  background: #EAEFF3;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  & > span {
+    height: 100%;
+    display: block;
+    border-radius: 4px;
+    background-color: #4598FF;
+  }
+}

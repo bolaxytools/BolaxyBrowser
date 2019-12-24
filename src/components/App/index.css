@@ -1,0 +1,16 @@
+.appWrapper {
+  background: url('../../assets/background.png') no-repeat;
+  background-size: auto 736px;
+  min-height: 736px;
+  min-width: 1200px;
+}
+.typeArea {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footerText {
+  color: #939EAB;
+  text-align: center;
+  padding-bottom: 28px;
+  padding-top: 100px;
+}

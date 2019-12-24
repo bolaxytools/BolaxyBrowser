@@ -1,0 +1,74 @@
+.content {
+  padding-top: 70px;
+}
+.content h5 {
+  font-size: 36px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.searchHeader {
+  display: flex;
+  align-items: center;
+  padding: 0 26px;
+  height: 50px;
+  background-color: #F7FCFF;
+  font-size: 16px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #262626;
+}
+.searchHeader > span:nth-last-child(1) {
+  text-align: right;
+}
+.searchContent {
+  padding: 0 20px;
+  min-height: 460px;
+  background: #fff;
+  box-shadow: 0px 5px 30px 0px rgba(229, 235, 242, 0.1);
+  border-radius: 6px;
+}
+.searchContent > p {
+  height: 77px;
+  line-height: 77px;
+  font-size: 16px;
+  color: #262626;
+}
+.addressInfo {
+  font-size: 18px;
+  padding-bottom: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.addressInfo::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background: url('../../../assets/key.png') no-repeat;
+}
+.line {
+  width: 4px;
+  height: 20px;
+  margin: 0 14px;
+  background-color: #F1844B;
+}
+.addressItem {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addressItem span {
+  font-size: 16px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #262626;
+}
+.symbol {
+  display: flex;
+  align-items: center;
+}

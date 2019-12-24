@@ -1,0 +1,61 @@
+@import '../../../styles/_common.less';
+
+.content {
+  padding-top: 70px;
+  h5 {
+    .titleFont;
+    padding-bottom: 20px;
+  }
+}
+
+.searchHeader {
+  .tbHeader;
+}
+
+.searchContent {
+  padding: 0 20px;
+  .searchContentDv;
+  & > p {
+    height: 77px;
+    line-height: 77px;
+    font-size: 16px;
+    color: #262626;
+  }
+}
+
+.addressInfo {
+  font-size: 18px;
+  padding-bottom: 40px;
+  color: #fff;
+  .rowCenter;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background: url('../../../assets/key.png') no-repeat;
+  }
+}
+
+.line {
+  width: 4px;
+  height: 20px;
+  margin: 0 14px;
+  background-color: #F1844B;
+}
+
+.addressItem {
+  height: 62px;
+  .flexBtwCer;
+  span {
+    font-size: 16px;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #262626;
+  }
+}
+
+.symbol {
+  .rowCenter;
+}

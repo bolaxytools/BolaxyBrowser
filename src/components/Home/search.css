@@ -1,0 +1,43 @@
+.search {
+  padding-top: 126px;
+}
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 87px;
+}
+.searchBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 54px;
+  border-radius: 27px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.searchBox > input {
+  height: 100%;
+  width: 730px;
+  padding: 0 30px;
+  font-size: 14px;
+}
+.searchBox > input::placeholder {
+  color: #808080;
+}
+.searchBtn {
+  background-color: #F1844B;
+  width: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.searchBtn:active {
+  opacity: 0.6;
+}

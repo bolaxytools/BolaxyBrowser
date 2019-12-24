@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  height: 50px;
+  padding: 0 26px;
+  align-items: center;
+}
+.item > :last-child {
+  text-align: right;
+}
+.item:active {
+  opacity: 0.6;
+}
+.item p {
+  margin-bottom: 0;
+}
+.imgText {
+  display: flex;
+  align-items: center;
+}
+.imgText > span {
+  padding-left: 10px;
+}
+.hashText {
+  color: #3671F1;
+}

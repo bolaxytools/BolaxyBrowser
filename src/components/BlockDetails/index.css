@@ -1,0 +1,77 @@
+.container {
+  padding-top: 161px;
+}
+.jumpDv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 53px 0 30px;
+}
+.jumpDv span {
+  color: #4598FF;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.jumpDv span:active {
+  opacity: 0.6;
+}
+.updown > span:nth-child(1) {
+  margin-right: 30px;
+}
+.content {
+  box-shadow: 0px 5px 30px 0px rgba(229, 235, 242, 0.1);
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.contentH {
+  height: 180px;
+  padding: 40px 0;
+  background: url('../../assets/Backgroung_green.png') no-repeat;
+  display: flex;
+}
+.contentH > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.contentH > div:nth-child(1) {
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.contentH > div > span:nth-child(1) {
+  font-size: 30px;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.contentB {
+  padding: 50px 60px;
+}
+.contentB p {
+  margin-bottom: 0;
+}
+.bTitle {
+  font-size: 20px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  padding-bottom: 15px;
+  color: #262626;
+}
+.item {
+  color: #454F63;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.item::before {
+  content: '';
+  display: block;
+  background: url('../../assets/p.png') no-repeat;
+  width: 14px;
+  height: 18px;
+  padding-right: 10px;
+}

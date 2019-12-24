@@ -1,0 +1,105 @@
+@import '../../../styles/_common.less';
+
+.homeBase {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.circleOverview {
+  height: 332px;
+  border-radius:6px 50px 6px 50px;
+  background-color: #fff;
+  margin-top: 132px;
+  padding: 25px 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleDv {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('../../../assets/pie.png');
+  }
+  & > span {
+    font-size: 16px;
+    color: #808080;
+  }
+  & > span:nth-child(1) {
+    color: #262626;
+    padding: 0 10px;
+  }
+}
+
+.contentDv {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.contentInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & > p:nth-child(1) {
+    font-size: 30px;
+    font-family: DINAlternate-Bold,DINAlternate;
+    font-weight: bold;
+    color: #0B3E6D;
+    padding-bottom: 5px;
+  }
+}
+
+.newTitle {
+  font-size: 36px;
+  .center;
+  padding: 110px 0 60px 0;
+  color: #262626;
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 4px;
+    height: 28px;
+    background-color: #0F4C82;
+    margin-right: 19px;
+  }
+}
+
+.contentBox {
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 6px;
+}
+
+.imgTitle {
+  .center;
+  font-size: 16px;
+  justify-content: flex-start;
+  color: #262626;
+  padding-bottom: 30px;
+  & > img {
+    margin-right: 11px;
+  }
+}
+
+.infoList {
+  padding: 15px 0 20px;
+}
+
+.more {
+  text-align: center;
+  padding-bottom: 3px;
+}
