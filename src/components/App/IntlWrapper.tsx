@@ -15,14 +15,13 @@ interface IProps {
 export default function IntlWrapper({ children }: IProps) {
     const [currentLocale, setCurrentLocale] = React.useState('')
     const [antdLocaleData, setAntdLocaleData] = React.useState<Locale>()
-
     function loadLocales() {
         let targetLocale = intl.determineLocale({ localStorageLocaleKey:  LOCALSTORAGE_KEYS.LANG}) as LOCALES_KEYS
         // default is English
         if (!find(SUPPOER_LOCALES, { value: targetLocale })) {
-            targetLocale = LOCALES_KEYS.ZH_CN
-            window.localStorage.setItem(LOCALSTORAGE_KEYS.LANG, targetLocale)
+            targetLocale = LOCALES_KEYS.EN_US
         }
+        window.localStorage.setItem(LOCALSTORAGE_KEYS.LANG, targetLocale)
         getLocaleLoader(targetLocale).then(res => {
             intl.init({ currentLocale: targetLocale, locales: { [targetLocale]: res.localeData } }).then(() => {
                 setCurrentLocale(targetLocale)

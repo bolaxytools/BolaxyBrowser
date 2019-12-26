@@ -75,9 +75,8 @@ export class SearchStore extends StoreExt {
           break
         }
       }
-      console.log(res)
     } catch (err) {
-      console.log(err)
+      this.setIsEmpty(true)
     }
   }
 

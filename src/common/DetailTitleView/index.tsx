@@ -14,7 +14,7 @@ function DetailTitleView ({title, lineColor, hash, img} : IProps) {
     <div>
       <h5 className = {styles.title}>{title}</h5>
       <div className = {styles.content}>
-        <img src = {img} alt=""/>
+        <img src = {img} alt="" width = {24} height = {24}/>
         <span>{intl.get('TYPE_NAME')}</span>
         <span className = {styles.line} style = {{backgroundColor: lineColor}}></span>
         <span>{hash}</span>

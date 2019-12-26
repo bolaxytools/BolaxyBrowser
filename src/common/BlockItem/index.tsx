@@ -20,7 +20,7 @@ function BlockItem ({item, flexList}: IProps) {
   return (
     <div className={styles.item} onClick = {toDetails}>
       <div className={styles.imgText} style={{flex: flexList[0].flex}}>
-        <img src={signal} alt=""/>
+        <img src={signal} alt="" width = {14} height = {11}/>
         <span>{formatCash(height)}</span>
       </div>
       <p className={styles.hashText} style={{flex: flexList[1].flex}}>{hash}</p>

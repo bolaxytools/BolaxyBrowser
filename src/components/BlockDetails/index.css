@@ -73,5 +73,6 @@
   background: url('../../assets/p.png') no-repeat;
   width: 14px;
   height: 18px;
+  background-size: contain;
   padding-right: 10px;
 }

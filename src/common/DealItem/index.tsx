@@ -20,7 +20,7 @@ function DealItem ({item, flexList}: IProps) {
   return (
     <div className={styles.item} onClick = {toDetails}>
       <div className={styles.imgText} style={{flex: flexList[0].flex}}>
-        <img src={airplane} alt=""/>
+        <img src={airplane} alt="" width={14} height={14}/>
         <span>{intl.get('TX')}</span>
       </div>
       <p className={styles.hashText} style={{flex: flexList[1].flex}}>{tx_hash}</p>

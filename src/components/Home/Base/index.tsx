@@ -71,7 +71,7 @@ const NewList = ({title, titleIcon, headers, children, path}: IProps) => {
       </div>
       <div className = {styles.contentBox}>
         <div className = {styles.imgTitle}>
-          <img src={titleIcon} alt=""/>
+          <img src={titleIcon} alt="" width = {16} height = {17}/>
           <span>{title}</span>
         </div>
         <ListHeaderView headers = {headers}/>

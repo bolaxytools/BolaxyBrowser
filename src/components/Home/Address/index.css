@@ -49,6 +49,7 @@
   height: 24px;
   margin-right: 8px;
   background: url('../../../assets/key.png') no-repeat;
+  background-size: contain;
 }
 .line {
   width: 4px;

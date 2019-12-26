@@ -32,7 +32,7 @@ function Search () {
             e.preventDefault()
             searchHandle(inputRef.current?.value || '')
           }}>
-          <img src={searchImg} alt="search"/>
+          <img src={searchImg} alt="search" height = {20} width = {20}/>
         </div>
       </div>
     </div>

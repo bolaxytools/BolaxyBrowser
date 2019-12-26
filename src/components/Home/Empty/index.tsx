@@ -8,7 +8,7 @@ function SearchEmpty () {
     <div className = {styles.searchContent}>
       <p>{intl.get('QUERY_RESULT')}</p>
       <div className = {styles.empty}>
-        <img src={null_information} alt="empty"/>
+        <img src={null_information} alt="empty" width = {110} height = {130}/>
         <p>{intl.get('EMPTY_RESULT')}</p>
       </div>
     </div>

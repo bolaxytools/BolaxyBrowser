@@ -55,7 +55,7 @@ class DealDetails extends React.Component<IProps> {
         </div>
         <div className = {styles.hContent}>
           <p>{addr_from}</p>
-          <img src={send_deal} alt=""/>
+          <img src={send_deal} alt="" width={60} height={60}/>
           <p>{addr_to}</p>
         </div>
       </div>

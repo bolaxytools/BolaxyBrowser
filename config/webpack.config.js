@@ -24,7 +24,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
-const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin')
+const { TypedCssModulesPlugin } = require('typed-css-modules-webpack-plugin');
 
 const postcssNormalize = require('postcss-normalize');
 
@@ -44,7 +44,7 @@ const imageInlineSizeLimit = parseInt(
 const useTypeScript = fs.existsSync(paths.appTsConfig);
 
 // style files regexes
-const cssRegex = /\.css$/;
+const cssRegex = /\.(css)$/;
 const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
@@ -104,6 +104,9 @@ module.exports = function(webpackEnv) {
           ident: 'postcss',
           plugins: () => [
             require('postcss-flexbugs-fixes'),
+            require('autoprefixer') ({
+              overrideBrowserslist: ['last 2 version', '>1%', 'ios 7']
+            }),
             require('postcss-preset-env')({
               autoprefixer: {
                 flexbox: 'no-2009',
@@ -379,7 +382,6 @@ module.exports = function(webpackEnv) {
                 customize: require.resolve(
                   'babel-preset-react-app/webpack-overrides'
                 ),
-                
                 plugins: [
                   [
                     require.resolve('babel-plugin-named-asset-import'),
@@ -551,9 +553,9 @@ module.exports = function(webpackEnv) {
     },
     plugins: [
       // Generates an `index.html` file with the <script> injected.
-      new TypedCssModulesPlugin({
-        globPattern: 'src/!(styles)/**/*.less'
-      }),
+      // new TypedCssModulesPlugin({
+      //   globPattern: 'src/!(styles)/**/*.less'
+      // }),
       new HtmlWebpackPlugin(
         Object.assign(
           {},

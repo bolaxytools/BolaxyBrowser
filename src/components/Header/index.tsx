@@ -30,7 +30,7 @@ function Header() {
   const {location} = useRootStore().routerStore
   const navs = navList(nav, location.pathname)
   const [modalVisible, setModalVisible] = React.useState(false)
-  const [currentLang, setCurrentLang] = React.useState(LOCALES_KEYS.ZH_CN)
+  const [currentLang, setCurrentLang] = React.useState(LOCALES_KEYS.EN_US)
   const setLang = () => {
     const local = localStorage.getItem(LOCALSTORAGE_KEYS.LANG) as LOCALES_KEYS
     setCurrentLang(local)
@@ -53,13 +53,13 @@ function Header() {
   useOnMount(docClick)
   return (
       <header className = {styles.header}>
-        <Link to="/"><img src = {logo} alt = 'bolaxy'></img></Link>
+        <Link to="/"><img src = {logo} alt = 'bolaxy' width = {126} height = {18}></img></Link>
         <div className = {styles.navBox}>
           {navs}
           <div className = {styles.language} ref = {refFa}>
               <div className = {modalVisible ? styles.langBtn_open : styles.langBtn_close} onClick = {() => {setModalVisible(!modalVisible)}}>
                   <span>{find(SUPPOER_LOCALES, {value: currentLang})?.name}</span>
-                  <img src={modalVisible ? push_down_highlight : push_down_white} alt=""/>
+                  <img src={modalVisible ? push_down_highlight : push_down_white} width = {10} height = {7} alt=""/>
               </div>
               <div className = {modalVisible ? styles.show : styles.hide}>
                 {SUPPOER_LOCALES.map(v => {

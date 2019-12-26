@@ -43,15 +43,15 @@ input,img{
 }
 
 /*行内元素*/
-a,a:active,a:visited{
+a {
   /*下划线和颜色*/
   text-decoration: none;
   color: rgba(54,113,241,0.8);
 }
 
-a:hover{
-  color:rgba(54,113,241,1);
-}
+// a:hover{
+//   color:rgba(54,113,241,1);
+// }
 
 textarea{
   /* 边框清零 */

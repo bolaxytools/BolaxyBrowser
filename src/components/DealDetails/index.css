@@ -80,8 +80,9 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url('../../assets/key_deal.png');
+  background: url('../../assets/key_deal.png') no-repeat;
   margin-right: 15px;
+  background-size: contain;
 }
 .progressTitle {
   display: flex;
