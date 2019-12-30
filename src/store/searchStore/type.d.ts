@@ -10,4 +10,5 @@ export interface Address {
   type: string // 类型
   symbol: string // 简称
   quantity: number // 数量
+  logo: string
 }

@@ -46,11 +46,11 @@ const CircleOverview = ({homeData}: COIProps) => {
             <p>{formatCash(main_coin_count)}</p>
             <p>{intl.get('COIN_COUNT')}</p>
           </div>
-          <div className={contentInfo}></div>
           <div className={contentInfo}>
             <p>{formatCash(gas_cost_count)}</p>
             <p>{intl.get('GAS_COUNT')}</p>
           </div>
+          <div className={contentInfo}></div>
         </div>
       </div>
     </div>

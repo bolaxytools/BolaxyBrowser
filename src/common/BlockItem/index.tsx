@@ -27,7 +27,7 @@ function BlockItem ({item, flexList}: IProps) {
       <div style={{flex: flexList[2].flex}}>
         <span>{formatCash(tx_count)}</span>
       </div>
-      <p style={{flex: flexList[3].flex}}>{moment(Number(block_time || 0) * 10).format('YYYY-MM-DD HH:mm:ss')}</p>
+      <p style={{flex: flexList[3].flex}}>{moment(Number(block_time || 0)).format('YYYY-MM-DD HH:mm:ss')}</p>
     </div>
   )
 }

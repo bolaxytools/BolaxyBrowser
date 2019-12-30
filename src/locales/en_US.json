@@ -6,7 +6,7 @@
   "ASSETS": "Assets",
   "SEARCH_TITLE": "Search Account Transaction Block",
   "SEARCH_P": "Account / Transaction / Block",
-  "League_OVERVIEW": "League Overview",
+  "CIRCLE_OVERVIEW": "League Overview",
   "ADDRESS_COUNT": "Active Addresses",
   "TX_COUNT": "Total Transactions",
   "BLOCK_COUNT": "Total Blocks",

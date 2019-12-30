@@ -5,12 +5,13 @@ import DetailTitleView from 'common/DetailTitleView';
 import airplane_deal from 'assets/airplane_deal.png';
 import send_deal from 'assets/send_deal.png';
 import { RootConsumer } from 'components/App/Provider'
-import {queryURL} from 'utils/index';
+import {queryURL, formatNumber} from 'utils/index';
 import {PAGE_PATH} from 'constants/index';
 import intl from 'react-intl-universal';
 
 interface IProps {
   dealStore: IDealStore.DealStore
+  searchStore: ISearchStore.SearchStore
   routerStore: RouterStore
 }
 
@@ -28,6 +29,13 @@ class DealDetails extends React.Component<IProps> {
     this.props.routerStore.replace(PAGE_PATH.DEAL)
   }
 
+  searchAddress = (addr: string) => {
+    const {setSearchValue} = this.props.searchStore
+    setSearchValue(addr)
+    console.log(addr)
+    this.props.routerStore.replace(PAGE_PATH.HOME)
+  }
+
   render () {
     const {transactionDetails} = this.props.dealStore
     return (
@@ -38,7 +46,7 @@ class DealDetails extends React.Component<IProps> {
             <span>{intl.get('BACK_TO_TXS')}</span>
           </div>
           <div className = {styles.content}>
-            {this.renderH(transactionDetails)}
+            {this.renderH(transactionDetails, this.searchAddress)}
             {this.renderB(transactionDetails)}
           </div>
         </div>
@@ -46,7 +54,7 @@ class DealDetails extends React.Component<IProps> {
     )
   }
 
-  renderH ({addr_from, addr_to} : IHomeStore.Transaction) {
+  renderH ({addr_from, addr_to} : IHomeStore.Transaction, searchAddress: (addr: string) => void) {
     return (
       <div className = {styles.contentH}>
         <div className = {styles.hTitle}>
@@ -54,9 +62,9 @@ class DealDetails extends React.Component<IProps> {
           <span>{intl.get('TO')}</span>
         </div>
         <div className = {styles.hContent}>
-          <p>{addr_from}</p>
+          <p onClick = {() => searchAddress(addr_from)}>{addr_from}</p>
           <img src={send_deal} alt="" width={60} height={60}/>
-          <p>{addr_to}</p>
+          <p onClick = {() => searchAddress(addr_to)}>{addr_to}</p>
         </div>
       </div>
     )
@@ -79,11 +87,11 @@ class DealDetails extends React.Component<IProps> {
           <p>{intl.get('CONFIRM_LEVEL')}</p>
         </li>
         <li>
-          <span>{amount}</span>
+          <span>{formatNumber(amount) || 0}</span>
           <p>{intl.get('AMOUNT')}</p>
         </li>
         <li>
-          <span>{miner_fee}</span>
+          <span>{formatNumber(miner_fee) || 0}</span>
           <p>{intl.get('FEE')}</p>
         </li>
         <li>
@@ -98,10 +106,11 @@ class DealDetails extends React.Component<IProps> {
 function Wrapper () {
   return (
     <RootConsumer>
-          {({ dealStore, routerStore }) => (
+          {({ dealStore, routerStore, searchStore }) => (
               <DealDetails
                 dealStore = {dealStore}
                 routerStore = {routerStore}
+                searchStore = {searchStore}
               />
           )}
       </RootConsumer>

@@ -8,18 +8,30 @@ import intl from 'react-intl-universal';
 function Search () {
   let inputRef: React.RefObject<HTMLInputElement> = React.createRef()
   const {searchStore} = useRootStore()
+  const {searchValue, setSearchValue, searchData} = searchStore
+  // searchStore.setSearchValue('')
   const searchHandle = (value: string) => {
-    searchStore.setSearchValue(value)
+    setSearchValue(value)
     if (value !== '') {
-      searchStore.searchData({
+      searchData({
         data: {
           content: value
         }
       })
     }
   }
+  
+  if (searchValue !== '') {
+    searchHandle(searchValue)
+  }
   const enterHandle = (e: React.KeyboardEvent) => {
     if (e.nativeEvent.keyCode === 13) searchHandle(inputRef.current?.value || '')
+  }
+
+  const searchValueChange = (e: React.BaseSyntheticEvent) => {
+    if (e.target.value === '') {
+      setSearchValue('')
+    }
   }
   return (
     <div className={styles.search}>
@@ -27,7 +39,7 @@ function Search () {
         <span>{intl.get('SEARCH_TITLE')}</span>
       </div>
       <div className={styles.searchBox}>
-        <input type="text" placeholder={intl.get('SEARCH_P')} ref={inputRef} onKeyPress = {enterHandle}/>
+        <input type="text" placeholder={intl.get('SEARCH_P')} ref={inputRef} onKeyPress = {enterHandle} defaultValue = {searchValue} onChange = {searchValueChange}/>
         <div className={styles.searchBtn} onClick={(e: React.MouseEvent) => {
             e.preventDefault()
             searchHandle(inputRef.current?.value || '')

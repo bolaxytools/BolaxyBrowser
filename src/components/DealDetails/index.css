@@ -46,6 +46,7 @@
 }
 .contentB > li > span {
   font-size: 30px;
+  line-height: 36px;
   font-family: DINAlternate-Bold, DINAlternate;
   font-weight: bold;
   color: #0B3E6D;
