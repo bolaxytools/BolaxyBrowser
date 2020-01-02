@@ -44,6 +44,7 @@
   "ADDRESS": "Address",
   "SYMBOL": "Symbol",
   "VOLUME": "Volume",
+  "TX_NUM":"Transactions",
   "500": "Failed to get data, please try again",
   "10001": "Success",
   "10002": "Json parameter error",

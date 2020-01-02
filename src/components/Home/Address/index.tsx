@@ -3,14 +3,14 @@ import styles from './index.less';
 import useRootStore from 'store/useRootStore';
 import { observer } from 'mobx-react';
 import intl from 'react-intl-universal';
-
+import {formatNumber} from 'utils/index';
 const addressItem = (item: ISearchStore.Address): React.ReactNode => (
   <div className = {styles.addressItem}>
     <div className = {styles.symbol}>
-      <img src="" alt=""/>
+      <img src={item.logo} width='18px' height='18px' alt=""/>
       <span>{item.symbol + ' balance'}</span>
     </div>
-    <span>{item.quantity}</span>
+    <span>{formatNumber(item.quantity)}</span>
   </div>
 )
 

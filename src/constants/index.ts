@@ -53,7 +53,7 @@ export const BLOCK_HEADER = [
         flex: 4
     },
     {
-        title: 'TX',
+        title: 'TX_NUM',
         flex: 2
     },
     {

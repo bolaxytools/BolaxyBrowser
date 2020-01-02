@@ -12,7 +12,7 @@ interface IProps {
 }
 
 function DealItem ({item, flexList}: IProps) {
-  const {tx_hash, tx_time} = item
+  const {tx_hash, tx_time, symbol} = item
   const toDetails = (e: React.MouseEvent) => {
     e.preventDefault()
     routerStore.history.push(PAGE_PATH.DEAL_DETAILS + tx_hash)
@@ -26,7 +26,7 @@ function DealItem ({item, flexList}: IProps) {
       <p className={styles.hashText} style={{flex: flexList[1].flex}}>{tx_hash}</p>
       <div style={{flex: flexList[2].flex}}>
         <img src="" alt=""/>
-        <span>USDT</span>
+        <span>{symbol}</span>
       </div>
       <p style={{flex: flexList[3].flex}}>{moment(tx_time).format('YYYY-MM-DD HH:mm:ss')}</p>
     </div>

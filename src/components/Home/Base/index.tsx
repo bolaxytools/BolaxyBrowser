@@ -8,17 +8,21 @@ import {DEAL_HEADER, BLOCK_HEADER} from 'constants/index';
 import {useOnMount} from 'utils/hooks';
 import useRootStore from 'store/useRootStore';
 import { observer } from 'mobx-react';
-import {formatCash} from 'utils';
+import {formatCash, formatNumber} from 'utils';
 import ListHeaderView from 'common/ListHeaderView';
 import {PAGE_PATH} from 'constants/index';
 import intl from 'react-intl-universal';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 interface COIProps {
   homeData: IHomeStore.IHome
+  routerStore: RouterStore
 }
-const CircleOverview = ({homeData}: COIProps) => {
+const CircleOverview = ({homeData, routerStore}: COIProps) => {
   const {content, contentInfo} = styles
+  const toJump = (path: string) => {
+	  routerStore.history.push(path)
+  }
   const {chain_id, block_count, address_count, main_coin_count, tx_count, gas_cost_count} = homeData
   return (
     <div className={styles.circleOverview}>
@@ -32,18 +36,18 @@ const CircleOverview = ({homeData}: COIProps) => {
             <p>{formatCash(address_count)}</p>
             <p>{intl.get('ADDRESS_COUNT')}</p>
           </div>
-          <div className={contentInfo}>
+          <div className={contentInfo} onClick = {() => toJump(PAGE_PATH.DEAL)}>
             <p>{formatCash(tx_count)}</p>
             <p>{intl.get('TX_COUNT')}</p>
           </div>
-          <div className={contentInfo}>
+          <div className={contentInfo} onClick = {() => toJump(PAGE_PATH.BLOCK)}>
             <p>{formatCash(block_count)}</p>
             <p>{intl.get('BLOCK_COUNT')}</p>
           </div>
         </div>
         <div className={content}>
           <div className={contentInfo}>
-            <p>{formatCash(main_coin_count)}</p>
+            <p>{formatCash(formatNumber(main_coin_count))}</p>
             <p>{intl.get('COIN_COUNT')}</p>
           </div>
           <div className={contentInfo}>
@@ -88,13 +92,13 @@ const NewList = ({title, titleIcon, headers, children, path}: IProps) => {
 
 
 function Base () {
-  const {homeStore} = useRootStore()
+  const {homeStore, routerStore} = useRootStore()
   useOnMount(homeStore.getHomeData)
   const homeData = homeStore.homeData
   const {txs, blocks} = homeData
   return (
     <div className = {styles.homeBase}>
-      <CircleOverview homeData = {homeData}/>
+      <CircleOverview homeData = {homeData} routerStore = {routerStore}/>
       <NewList title = {intl.get('NEW_TXS')} titleIcon = {money} headers = {DEAL_HEADER} path = {PAGE_PATH.DEAL}>
         {txs && txs.map((v, i) => (
           <div key = {String(i)}>

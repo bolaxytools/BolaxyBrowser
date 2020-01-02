@@ -14,6 +14,7 @@ export interface Transaction {
   block_height: number // 交易块高
   tx_time: number // 交易时间
   memo?: string // 备注信息
+  symbol?: string // 币种简称
 }
 
 export interface Blocks {
