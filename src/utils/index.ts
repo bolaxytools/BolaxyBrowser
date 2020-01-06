@@ -8,7 +8,11 @@
 
 export function formatCash (num?: number | string): string {
   num = num || 0
-  return String(num).replace(/(?!^)(?=(\d{3})+$)/g, ',')
+  const strs = String(num).split(".")
+  if (strs.length>1){
+	  return strs[0].replace(/(?!^)(?=(\d{3})+$)/g, ',')+"."+strs[1]
+  }
+  return strs[0].replace(/(?!^)(?=(\d{3})+$)/g, ',')
 }
 
 /**

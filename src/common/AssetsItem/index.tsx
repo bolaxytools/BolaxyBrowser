@@ -14,7 +14,7 @@ function AssetsItem ({item, flexList} : IProps) {
     <div className = {styles.item}>
       <span className = {hashText} style={{flex: flexList[0].flex}}>{name}</span>
       <span className = {hashText} style={{flex: flexList[1].flex}}>{contract}</span>
-      <span style={{flex: flexList[2].flex}}>{type}</span>
+      <span style={{flex: flexList[2].flex}}>{contract=='BUSD'?'BUSD':'BRC'}</span>
       <div className = {styles.imgText} style={{flex: flexList[3].flex}}>
         <img src={logo} alt="" width = {18} height = {18}/>
         <span>{symbol}</span>

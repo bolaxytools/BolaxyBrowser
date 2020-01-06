@@ -51,7 +51,7 @@ const CircleOverview = ({homeData, routerStore}: COIProps) => {
             <p>{intl.get('COIN_COUNT')}</p>
           </div>
           <div className={contentInfo}>
-            <p>{formatCash(gas_cost_count)}</p>
+            <p>{formatCash(formatNumber(gas_cost_count))}</p>
             <p>{intl.get('GAS_COUNT')}</p>
           </div>
           <div className={contentInfo}></div>

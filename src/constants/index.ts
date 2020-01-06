@@ -68,7 +68,7 @@ export const ADDRESS_HEADER = [
         flex: 3
     },
     {
-        title: 'ADDRESS',
+        title: 'CONTRACT_ADDRESS',
         flex: 5
     },
     {
